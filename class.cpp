@@ -1,29 +1,27 @@
 #include<iostream>
 using namespace std;
-class employee{
-	private:
-		int a,b,c;
-		public:
-			int d,e,f;
-			void setdata(int a1,int b1,int c1);
-			void getdata(){
-				cout<<"the value of a is: "<<a<<endl;
-			cout<<"the value of a is: "<<b<<endl;
-				cout<<"the value of a is: "<<c<<endl;
-					cout<<"the value of a is: "<<d<<endl;
-						cout<<"the value of a is: "<<e<<endl;
-			}
+class person{
+    char name[30];
+    int age;
+    public:
+    void getdata(void);
+    void display(void);
 };
-void employee::setdata(int a1,int b1,int c1){
-	a=a1;
-	b=b1;
-	c=c1;
+void person:: getdata(void)
+{
+    cout<<"enter name: " ;
+     cin>>name ;
+    cout <<"enter age: ";
+    cin>>age;
+}
+void person ::display(void)
+{
+    cout <<"\nname: "<<name;
+    cout<<"\nage: "<<age;
 }
 int main(){
-	employee harry;
-	harry.d=65;
-	harry.e=56;
-	harry.setdata(1,5,6);
-	harry.getdata();
-	return 0;
+    person p;
+    p.getdata();
+    p.display();
+    return 0;
 }
